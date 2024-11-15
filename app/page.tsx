@@ -1,9 +1,18 @@
-import Image from "next/image";
+"use client";
+
+import dynamic from "next/dynamic";
+
+const Robot3D = dynamic(() => import("./components/robot-3d"), { ssr: false });
+
+import { MainSection } from "./components/main-section";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
-      <Image src="/chennaireact.png" alt="Chennai React Logo" width={800} height={800} />
-    </div>
+    <>
+      <MainSection />
+      {/* <main className="h-full">
+        <Robot3D />
+      </main> */}
+    </>
   );
 }
