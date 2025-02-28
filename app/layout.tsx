@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Chennai React",
   description:
-    "Welcome to the Chennai ReactJS Meetup Group! We are a community of enthusiasts who are passionate about all things React. This group provides a platform to meetup, connect, and deepen our knowledge on the latest trends and developments in ReactJS. Whether you're a beginner or an expert, join us to explore and discuss the intersection of technology, society, and the ReactJS framework. Let's collaborate, learn, and grow together as a community!",
+    "Welcome to the Chennai Reactjs Meetup Group! We are a community of enthusiasts who are passionate about all things React. This group provides a platform to meetup, connect, and deepen our knowledge on the latest trends and developments in Reactjs. Whether you're a beginner or an expert, join us to explore and discuss the intersection of technology, society, and the Reactjs framework. Let's collaborate, learn, and grow together as a community!",
 };
 
 export default function RootLayout({
