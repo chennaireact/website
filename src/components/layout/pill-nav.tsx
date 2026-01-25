@@ -3,7 +3,8 @@ import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import { useScrollLogo } from "../context/ScrollLogoContext";
+import { useScrollLogo } from "@/context/scroll-logo-context";
+import { NAV_DEFAULTS, PALETTE } from "@/lib/theme";
 export type PillNavItem = {
   label: string;
   href: string;
@@ -32,9 +33,9 @@ const PillNav: React.FC<PillNavProps> = ({
   activeHref,
   className = "",
   ease = "power3.easeOut",
-  baseColor = "#fff",
-  pillColor = "#060010",
-  hoveredPillTextColor = "#060010",
+  baseColor = NAV_DEFAULTS.baseColor,
+  pillColor = NAV_DEFAULTS.pillColor,
+  hoveredPillTextColor = NAV_DEFAULTS.hoveredPillTextColor,
   pillTextColor,
   onMobileMenuClick,
   initialLoadAnimation = true,
@@ -376,7 +377,7 @@ const PillNav: React.FC<PillNavProps> = ({
                   {isActive && (
                     <span
                       className="absolute -bottom-[6px] left-1/2 z-[4] h-3 w-3 -translate-x-1/2 rounded-full"
-                      style={{ background: "var(--base, #000)" }}
+                      style={{ background: `var(--base, ${PALETTE.black})` }}
                       aria-hidden="true"
                     />
                   )}
@@ -428,16 +429,16 @@ const PillNav: React.FC<PillNavProps> = ({
           style={{
             width: "var(--nav-h)",
             height: "var(--nav-h)",
-            background: "var(--base, #000)",
+            background: `var(--base, ${PALETTE.black})`,
           }}
         >
           <span
             className="hamburger-line h-0.5 w-4 origin-center rounded transition-all duration-[10ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
-            style={{ background: "var(--pill-bg, #fff)" }}
+            style={{ background: `var(--pill-bg, ${PALETTE.white})` }}
           />
           <span
             className="hamburger-line h-0.5 w-4 origin-center rounded transition-all duration-[10ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
-            style={{ background: "var(--pill-bg, #fff)" }}
+            style={{ background: `var(--pill-bg, ${PALETTE.white})` }}
           />
         </button>
       </nav>
@@ -447,7 +448,7 @@ const PillNav: React.FC<PillNavProps> = ({
         className="absolute top-[3em] right-4 left-4 z-[998] origin-top rounded-[27px] shadow-[0_8px_32px_rgba(0,0,0,0.12)] md:hidden"
         style={{
           ...cssVars,
-          background: "var(--base, #f0f0f0)",
+          background: `var(--base, ${NAV_DEFAULTS.mobileMenuBg})`,
         }}
       >
         <ul className="m-0 flex list-none flex-col gap-[3px] p-[3px]">

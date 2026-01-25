@@ -1,5 +1,10 @@
 # Chennai React
 
+> **📘 Project Structure Guidelines**
+>
+> Please refer to [docs/PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md) for detailed information on folder organization, naming conventions, and scalability
+> patterns.
+
 ## Getting Started
 
 Install dependencies:

@@ -5,7 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
 import { Group } from "three";
 
-useGLTF.preload("/robot_playground.glb");
+useGLTF.preload("/models/robot_playground.glb");
 
 export default function RobotScene() {
   return (
@@ -21,7 +21,7 @@ export default function RobotScene() {
 
 function RobotModel() {
   const group = useRef<Group>(null);
-  const { animations, scene } = useGLTF("/robot_playground.glb");
+  const { animations, scene } = useGLTF("/models/robot_playground.glb");
   const { actions } = useAnimations(animations, scene);
   useEffect(() => {
     if (actions["Experiment"]) {

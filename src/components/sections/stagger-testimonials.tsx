@@ -4,77 +4,10 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
-interface Testimonial {
-  name: string;
-  role: string;
-  content: string;
-  avatar: string;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    name: "Rajesh Kumar",
-    role: "Tech Lead at Zoho",
-    content: "Chennai React has been instrumental in building our community. The meetups are well-organized and the speakers are top-notch!",
-    avatar: "👨‍💻",
-  },
-  {
-    name: "Priya Subramanian",
-    role: "Senior Developer at Freshworks",
-    content: "Best React community in Chennai! I've learned so much from the workshops and networking events. Highly recommended for all React developers.",
-    avatar: "👩‍💻",
-  },
-  {
-    name: "Karthik Venkatesh",
-    role: "Frontend Engineer at PayPal",
-    content: "The quality of talks and the passionate community make Chennai React meetups a must-attend for anyone serious about React development.",
-    avatar: "👨‍🎓",
-  },
-  {
-    name: "Divya Ramesh",
-    role: "Full Stack Developer at Thoughtworks",
-    content: "Amazing community with great energy! The hands-on sessions have helped me level up my React skills significantly.",
-    avatar: "👩‍🔬",
-  },
-  {
-    name: "Arun Prakash",
-    role: "CTO at StartupTN",
-    content: "Chennai React is doing fantastic work in nurturing the tech community. The knowledge sharing and collaboration is unmatched!",
-    avatar: "🧑‍💼",
-  },
-  {
-    name: "Nikhil Kumar",
-    role: "CTO at StartupTN",
-    content: "Chennai React is doing fantastic work in nurturing the tech community. The knowledge sharing and collaboration is unmatched!",
-    avatar: "🧑‍💼",
-  },
-  {
-    name: "Kumar",
-    role: "CTO at StartupTN",
-    content: "Chennai React is doing fantastic work in nurturing the tech community. The knowledge sharing and collaboration is unmatched!",
-    avatar: "🧑‍💼",
-  },
-  {
-    name: "Kumaran",
-    role: "CTO at StartupTN",
-    content: "Chennai React is doing fantastic work in nurturing the tech community. The knowledge sharing and collaboration is unmatched!",
-    avatar: "🧑‍💼",
-  },
-  {
-    name: "Ritesh",
-    role: "CTO at StartupTN",
-    content: "Chennai React is doing fantastic work in nurturing the tech community. The knowledge sharing and collaboration is unmatched!",
-    avatar: "🧑‍💼",
-  },
-  {
-    name: "Ritesh S",
-    role: "CTO at StartupTN",
-    content: "Chennai React is doing fantastic work in nurturing the tech community. The knowledge sharing and collaboration is unmatched!",
-    avatar: "🧑‍💼",
-  },
-];
+import { SITE_CONTENT } from "@/lib/constants";
 
 export function StaggerTestimonials() {
+  const { items: testimonials, title, subtitle } = SITE_CONTENT.testimonials;
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handlePrevious = () => {
@@ -111,8 +44,8 @@ export function StaggerTestimonials() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">What Our Community Says</h2>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600">Hear from developers who are part of Chennai's most vibrant React community</p>
+          <h2 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">{title}</h2>
+          <p className="mx-auto max-w-2xl text-lg text-gray-600">{subtitle}</p>
         </div>
 
         {/* Testimonials Carousel */}
@@ -129,7 +62,7 @@ export function StaggerTestimonials() {
               return (
                 <motion.div
                   key={index}
-                  className="absolute cursor-pointer"
+                  className="absolute cursor-pointer w-[340px] [perspective:1000px] [transform-style:preserve-3d]"
                   initial={false}
                   animate={{
                     x: position * cardSpacing,
@@ -145,20 +78,14 @@ export function StaggerTestimonials() {
                     damping: 25,
                   }}
                   onClick={() => handleCardClick(index)}
-                  style={{
-                    width: "340px",
-                    perspective: "1000px",
-                    transformStyle: "preserve-3d",
-                  }}
+
                 >
                   <div
-                    className={`relative overflow-hidden rounded-3xl p-10 shadow-2xl transition-all duration-500 ${
-                      isActive ? "bg-linear-to-br from-orange-500 to-orange-600 text-white" : "bg-white/90 text-gray-900 backdrop-blur-sm"
+                    className={`relative overflow-hidden rounded-3xl p-10 shadow-2xl transition-all duration-500 min-h-[320px] ${
+                      isActive
+                        ? "bg-linear-to-br from-orange-500 to-orange-600 text-white border-none"
+                        : "bg-white/90 text-gray-900 backdrop-blur-sm border border-black/5"
                     }`}
-                    style={{
-                      minHeight: "320px",
-                      border: isActive ? "none" : "1px solid rgba(0,0,0,0.05)",
-                    }}
                   >
                     {/* Avatar */}
 

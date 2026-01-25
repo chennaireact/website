@@ -1,9 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useLayoutEffect, useRef, useState } from "react";
-import { useScrollLogo } from "../context/ScrollLogoContext";
-import ChennaiCentral from "../public/chennai-central-1.svg";
-import ReactLogo from "../public/react-outline.svg";
+import { useScrollLogo } from "@/context/scroll-logo-context";
+import { IMAGES } from "@/lib/images";
 
 export function MainSection() {
   // Scroll progress (0 = top, 1 = fully zoomed)
@@ -105,7 +104,7 @@ export function MainSection() {
   }, [scrollY, setIsLogoDocked, flightEnd]);
 
   return (
-    <div style={{ height: "210vh", overflow: "hidden", position: "relative" }}>
+    <div className="relative h-[210vh] overflow-hidden">
       <motion.div
         ref={containerRef}
         style={{
@@ -127,11 +126,10 @@ export function MainSection() {
       >
         <div className="flex h-full w-full items-end justify-center">
           <Image
-            className="absolute bottom-[-4px] h-auto w-full object-contain"
-            src={ChennaiCentral}
+            className="absolute bottom-[-4px] h-auto w-full object-contain pointer-events-none select-none"
+            src={IMAGES.ChennaiCentral}
             alt="Chennai Central"
             priority
-            style={{ pointerEvents: "none", userSelect: "none" }}
             draggable={false}
           />
         </div>
@@ -153,7 +151,7 @@ export function MainSection() {
             pointerEvents: "none",
           }}
         >
-          <Image src={ReactLogo} alt="React Logo" fill style={{ objectFit: "contain" }} priority />
+          <Image src={IMAGES.ReactLogo} alt="React Logo" fill className="object-contain" priority />
         </motion.div>
       )}
     </div>
