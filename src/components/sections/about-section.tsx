@@ -2,7 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { IMAGES } from "@/lib/images";
+import { SITE_CONTENT } from "@/lib/constants";
+
 export function AboutSection() {
+  const { heroImageAlt, location, greetings, title, description } = SITE_CONTENT.about;
+  
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-linear-to-b from-sky-200 via-blue-100 to-white">
       <div className="container mx-auto px-4 py-24 md:py-32">
@@ -16,7 +21,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="relative h-full w-full overflow-hidden rounded-full border-8 border-white shadow-2xl"
           >
-            <Image src="/chennaireact.png" alt="Chennai React Community" fill className="object-cover" priority />
+            <Image src={IMAGES.ChennaiReact} alt={heroImageAlt} fill className="object-cover" priority />
           </motion.div>
 
           {/* Floating Element 1: Location Badge */}
@@ -30,8 +35,8 @@ export function AboutSection() {
             <div className="flex items-center gap-2">
               <span className="text-2xl">📍</span>
               <div className="text-left">
-                <div className="text-xs text-gray-500">Based in</div>
-                <div className="text-sm font-semibold text-gray-900">Chennai</div>
+                <div className="text-xs text-gray-500">{location.label}</div>
+                <div className="text-sm font-semibold text-gray-900">{location.city}</div>
               </div>
             </div>
           </motion.div>
@@ -44,7 +49,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="absolute top-[10%] right-0 rounded-2xl bg-white px-4 py-3 shadow-lg"
           >
-            <div className="text-xl font-medium">👋 Hello!</div>
+            <div className="text-xl font-medium">{greetings.hello}</div>
           </motion.div>
 
           {/* Floating Element 3: Fire Emoji */}
@@ -55,7 +60,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="absolute right-[10%] bottom-[15%] flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg"
           >
-            <span className="text-3xl">🔥</span>
+            <span className="text-3xl">{greetings.fire}</span>
           </motion.div>
         </div>
 
@@ -67,7 +72,7 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="mb-8 text-center"
         >
-          <h2 className="mb-4 text-5xl leading-tight font-black tracking-tight text-gray-900 uppercase md:text-7xl lg:text-8xl">Chennai React</h2>
+          <h2 className="mb-4 text-5xl leading-tight font-black tracking-tight text-gray-900 uppercase md:text-7xl lg:text-8xl">{title}</h2>
         </motion.div>
 
         {/* Description */}
@@ -78,10 +83,11 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="mx-auto max-w-3xl space-y-4 text-center"
         >
-          <p className="text-lg text-gray-700 md:text-xl lg:text-2xl">We are a community of enthusiasts who are passionate about all things React.</p>
-          <p className="text-base text-gray-600 md:text-lg lg:text-xl">
-            This community provides a platform to meetup, connect, and deepen our knowledge on the latest trends and developments in Reactjs.
-          </p>
+           {description.map((desc, index) => (
+             <p key={index} className={`text-gray-${index === 0 ? "700" : "600"} ${index === 0 ? "text-lg md:text-xl lg:text-2xl" : "text-base md:text-lg lg:text-xl"}`}>
+               {desc}
+             </p>
+           ))}
         </motion.div>
       </div>
     </section>
