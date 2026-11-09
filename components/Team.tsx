@@ -26,7 +26,7 @@ export default function Team() {
     {
       name: "Dhanush Kandhan",
       link: "https://www.linkedin.com/in/dhanushkandhan/",
-      image: "/team/dhanush-kandhan.jpeg",
+      image: "/team/dhanush-kandhan.png",
     },
     {
       name: "Jai Saravanan",
@@ -41,12 +41,17 @@ export default function Team() {
     {
       name: "SB Praveen",
       link: "https://www.linkedin.com/in/sb-praveen-38423a154/",
-      image: "/team/sb-praveen.jpeg",
+      image: "/team/sb-praveen.JPG",
     },
     {
       name: "Shanthi Palani",
       link: "https://www.linkedin.com/in/shanthi-palani-0500a9100/",
       image: "/team/shanthi-palani.jpeg",
+    },
+    {
+      name: "Navin Balaji",
+      link: "https://www.linkedin.com/in/navinbalaji/",
+      image: "/team/navin-updated.jpeg",
     },
     {
       name: "Aravind Kumar",
@@ -72,11 +77,6 @@ export default function Team() {
       name: "Chandramouli S",
       link: "https://www.linkedin.com/in/chandramouli05/",
       image: "/team/chandramouli-s.jpeg",
-    },
-    {
-      name: "Navin Balaji",
-      link: "https://www.linkedin.com/in/navinbalaji/",
-      image: "/team/navin.jpeg",
     },
     {
       name: "Roja Gnanavel",

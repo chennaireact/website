@@ -1,0 +1,47 @@
+/* Photo split panel: two overlapping clipped halves with independent content. */
+.contribute-split{position:relative;height:600px;background:#112535;border-radius:14px;overflow:hidden}.contribute-tile{position:absolute;top:0;bottom:0;width:62%;display:flex;overflow:hidden;color:#fff}.contribute-tile:first-child{left:0;align-items:flex-start;clip-path:polygon(0 0,100% 0,80.5% 100%,0 100%)}.contribute-tile:last-child{right:0;align-items:flex-end;justify-content:flex-end;clip-path:polygon(20% 0,100% 0,100% 100%,0 100%)}.contribute-photo{position:absolute;inset:0;z-index:0}.contribute-photo img{object-fit:cover}.contribute-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,23,35,.85),rgba(9,23,35,.15) 85%)}.contribute-tile:last-child .contribute-photo::after{background:linear-gradient(270deg,rgba(9,23,35,.85),rgba(9,23,35,.15) 85%)}.contribute-copy{position:relative;z-index:1;max-width:55%;padding:42px}.contribute-copy>span:first-child{font-size:10px;font-weight:700;letter-spacing:.1em;color:#b5ddff}.contribute-copy h3{font-size:clamp(30px,3.5vw,48px);line-height:1.05;letter-spacing:-.04em;margin:16px 0}.contribute-copy p{font-size:15px;line-height:1.7;color:#edf5fa;margin:0}.contribute-action{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:12px 18px;border:1px solid rgba(255,255,255,.7);border-radius:999px;font-size:13px;font-weight:700}.contribute-tile:last-child .contribute-copy{text-align:right}.contribute-tile:hover .contribute-action{background:#fff;color:#172b42}.contribute-tile:focus-visible{outline:3px solid #fff;outline-offset:-5px}@media(max-width:700px){.contribute-split{height:auto;display:grid;gap:12px;background:transparent;border-radius:0}.contribute-tile,.contribute-tile:first-child,.contribute-tile:last-child{position:relative;inset:auto;width:100%;min-height:340px;clip-path:none;border-radius:12px;align-items:flex-end;justify-content:flex-start}.contribute-tile .contribute-photo::after,.contribute-tile:last-child .contribute-photo::after{background:linear-gradient(180deg,rgba(9,23,35,.08),rgba(9,23,35,.88))}.contribute-copy{max-width:100%;padding:24px}.contribute-copy h3{font-size:28px}.contribute-tile:last-child .contribute-copy{text-align:left}}
+/* Full-width, independent invitations. */
+.contribute-split{display:grid;grid-template-columns:1fr;height:auto;gap:16px;background:transparent;border-radius:0;overflow:visible}
+.contribute-tile,.contribute-tile:first-child,.contribute-tile:last-child{position:relative;inset:auto;width:100%;min-height:460px;clip-path:none;border-radius:14px;align-items:center;justify-content:flex-start}
+.contribute-tile:last-child{justify-content:flex-end}
+.contribute-copy{max-width:500px;padding:clamp(28px,5vw,60px)}
+.contribute-tile:last-child .contribute-copy{text-align:right}
+.contribute-tile:first-child .contribute-photo::after{background:linear-gradient(90deg,rgba(9,23,35,.9),rgba(9,23,35,.12) 85%)}
+.contribute-tile:last-child .contribute-photo::after{background:linear-gradient(270deg,rgba(9,23,35,.9),rgba(9,23,35,.12) 85%)}
+@media(max-width:700px){.contribute-tile,.contribute-tile:first-child,.contribute-tile:last-child{min-height:350px;align-items:flex-end;justify-content:flex-start}.contribute-copy{padding:24px;max-width:100%}.contribute-tile:last-child .contribute-copy{text-align:left}.contribute-tile:first-child .contribute-photo::after,.contribute-tile:last-child .contribute-photo::after{background:linear-gradient(180deg,rgba(9,23,35,.05),rgba(9,23,35,.88))}}
+.contribute-split{width:100vw;margin-left:calc(50% - 50vw);gap:0}
+.contribute-tile,.contribute-tile:first-child,.contribute-tile:last-child{border-radius:0}
+.contribute-split{width:100%;margin-left:0;gap:20px}
+.contribute-tile,.contribute-tile:first-child,.contribute-tile:last-child{border-radius:14px}
+@media(max-width:700px){.contribute-split{gap:14px}.contribute-tile,.contribute-tile:first-child,.contribute-tile:last-child{border-radius:12px}}
+/* Soft, organic edges for the two image panels. */
+.contribute-tile:first-child{border-radius:26px 90px 26px 70px}
+.contribute-tile:last-child{border-radius:90px 26px 70px 26px}
+@media(max-width:700px){.contribute-tile:first-child{border-radius:20px 52px 20px 42px}.contribute-tile:last-child{border-radius:52px 20px 42px 20px}}
+
+.contribute-tile:first-child .contribute-photo img{object-position:55% center}.contribute-tile:last-child .contribute-photo img{object-position:center center}@media(max-width:700px){.contribute-tile:first-child .contribute-photo img{object-position:48% center}}
+/* A soft kolam bridges the two invitations. */
+.contribute-split{position:relative}
+.contribute-split::after{content:"";position:absolute;z-index:3;left:50%;top:50%;width:clamp(180px,24vw,320px);aspect-ratio:1;transform:translate(-50%,-50%);background:url('/illustrations/kolam.png') center / contain no-repeat;filter:grayscale(1);opacity:.09;pointer-events:none}
+@media(max-width:700px){.contribute-split::after{width:180px;opacity:.08}}
+.contribute-split::after{filter:brightness(0) invert(1);opacity:.32}
+@media(max-width:700px){.contribute-split::after{opacity:.28}}
+.contribute-split::after{display:none}
+.support-sponsors .sponsors-grid .sponsor-logo{border:0;background:transparent;min-height:130px;padding:12px}
+.support-sponsors .sponsor-logo img{display:block;width:100%;height:90px;max-width:190px;max-height:90px;object-fit:contain}
+@media(max-width:700px){.support-sponsors .sponsors-grid .sponsor-logo{min-height:105px;padding:10px}.support-sponsors .sponsor-logo img{height:75px;max-height:75px}}
+
+.contribute-tile:first-child .contribute-photo img{object-position:50% 30%}
+
+.contribute-tile:first-child .contribute-photo img{object-position:center top}
+
+.partners-marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}.partners-track{display:flex;width:max-content;animation:partners-scroll 35s linear infinite}.partners-marquee:hover .partners-track,.partners-marquee:focus-within .partners-track{animation-play-state:paused}.partners-group{display:flex;align-items:center;flex:none}.support-sponsors .partners-group .sponsor-logo{width:200px;min-height:120px;padding:14px 22px;border:0;background:transparent}.support-sponsors .partners-group .sponsor-logo img{width:100%;height:75px;object-fit:contain}@keyframes partners-scroll{to{transform:translateX(-50%)}}@media(max-width:700px){.support-sponsors .partners-group .sponsor-logo{width:155px;min-height:95px;padding:10px 18px}.support-sponsors .partners-group .sponsor-logo img{height:65px}}@media(prefers-reduced-motion:reduce){.partners-marquee{overflow-x:auto;mask-image:none}.partners-track{animation:none}.partners-group[aria-hidden="true"]{display:none}}
+
+.support-sponsors .partner-logo{display:flex;flex-direction:column;justify-content:center;gap:12px;text-align:center}.support-sponsors .partner-logo span{font-size:12px;font-weight:600;color:#617286;line-height:1.3}.support-sponsors .partner-logo:hover span{color:#087cf0}
+@media(max-width:700px){
+  .contribute-copy{padding:22px}
+  .contribute-copy>span:first-child{font-size:9px}
+  .contribute-copy h3{font-size:clamp(21px,6vw,25px);margin:10px 0;line-height:1.12}
+  .contribute-copy p{font-size:13px;line-height:1.5}
+  .contribute-action{font-size:12px;padding:10px 15px;margin-top:16px}
+}

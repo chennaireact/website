@@ -1,0 +1,2 @@
+.metro-crossing{position:relative;width:100%;height:110px;overflow:hidden;background:transparent;pointer-events:none}.metro-crossing-track{position:absolute;inset:0;border-bottom:0}.metro-crossing-train{position:absolute;bottom:0;left:0;width:1000px;max-width:none;height:auto;will-change:transform}@media(max-width:600px){.metro-crossing{height:75px}.metro-crossing-train{width:760px}}@media(prefers-reduced-motion:reduce){.metro-crossing-train{will-change:auto}}
+.metro-crossing-track{border-bottom:2px solid #b9cbd8}

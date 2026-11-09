@@ -5,7 +5,7 @@ import { Socials } from "@/components/Socials";
 import Sponsors from "@/components/Sponsors";
 import Team from "@/components/Team";
 import { GridCard } from "@/components/ui/grid-card";
-import logo from "@/public/chennaireact.png";
+import logo from "@/public/chennaireact_bg.png";
 import ReactLogo from "@/public/react-logo.svg";
 import { motion } from "framer-motion";
 import Image from "next/image";

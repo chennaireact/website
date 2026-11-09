@@ -1,0 +1,22 @@
+footer{position:relative;margin-top:0}
+footer .footer-bridge{position:relative;display:block;width:100%;height:auto;overflow:hidden;line-height:0;background:linear-gradient(to bottom,#fff 0%,#fff 48%,#102b46 48%,#102b46 100%)}
+footer .footer-bridge picture,footer .footer-bridge img{display:block;width:100%;height:auto;max-width:none;margin:0}
+footer .footer-bridge+.footer-main{padding-top:30px}
+@media(max-width:600px){footer .footer-bridge+.footer-main{padding-top:24px}}
+.footer-content{display:grid;grid-template-columns:1.3fr .7fr 1.3fr;gap:60px;padding-top:30px;padding-bottom:65px}.footer-brand-block .footer-logo{width:200px;margin:0 0 20px}.footer-brand-block p{max-width:270px;margin:0;color:#b4c7d9;font-size:14px;line-height:1.7}.footer-nav,.footer-social{display:flex;flex-direction:column;align-items:flex-start}.footer-nav h2,.footer-social h2{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#a8bfd3;margin:0 0 20px}.footer-nav a,.footer-social a{font-size:13px;color:#e4edf4}.footer-nav a+a{margin-top:12px}.footer-nav a:hover,.footer-social a:hover{color:#70baff}.footer-social-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px}.footer-social-grid a{display:flex;align-items:center;gap:9px}.footer-social-grid svg{color:#a8bfd3;flex:none}@media(max-width:700px){.footer-content{grid-template-columns:1fr 1fr;gap:35px 25px;padding-top:24px;padding-bottom:45px}.footer-brand-block{grid-column:1/-1}.footer-social-grid{gap:14px 18px}}@media(max-width:370px){.footer-content{grid-template-columns:1fr}.footer-brand-block{grid-column:auto}}
+footer{margin-top:clamp(32px,5vw,72px)}
+@media(max-width:600px){footer{margin-top:36px}}
+
+footer{isolation:isolate;overflow:hidden}.footer-ambient{position:absolute;z-index:-1;left:50%;bottom:-210px;transform:translateX(-50%);width:clamp(360px,55vw,720px);opacity:.055;pointer-events:none}.footer-ambient img{display:block;width:100%;height:auto}.footer-content,.footer-bottom{position:relative;z-index:1}@media(max-width:700px){.footer-ambient{width:420px;bottom:-100px;opacity:.045}}
+
+/* Keep the bridge above the decorative, half-clipped React mark. */
+footer{position:relative;isolation:isolate;overflow:hidden}footer .footer-bridge{position:relative;z-index:2;inset:auto;transform:none;pointer-events:none}footer .footer-bridge picture,footer .footer-bridge img{display:block;width:100%;height:auto;max-width:none;margin:0}footer .footer-ambient{position:absolute;z-index:0;left:50%;bottom:0;width:clamp(360px,55vw,720px);transform:translate(-50%,50%);opacity:.07;pointer-events:none}footer .footer-ambient img{display:block;width:100%;height:auto}footer .footer-content,footer .footer-bottom{position:relative;z-index:1}@media(max-width:700px){footer .footer-ambient{width:420px;max-width:110%;bottom:0;transform:translate(-50%,50%);opacity:.06}}
+footer .footer-ambient{transform:translate(-50%,60%)}
+@media(max-width:700px){footer .footer-ambient{transform:translate(-50%,60%)}}
+footer .footer-ambient{opacity:.035}
+@media(max-width:700px){footer .footer-ambient{opacity:.03}}
+footer .footer-ambient{left:50%;bottom:0;width:clamp(260px,36vw,460px);transform:translate(-50%,50%)}
+@media(max-width:700px){footer .footer-ambient{width:min(300px,75vw);left:50%;bottom:0;transform:translate(-50%,50%)}}
+
+/* Decorative mark is CSS-only so footer markup stays identical on server and client. */
+footer::after{content:"";position:absolute;z-index:0;left:50%;bottom:0;width:clamp(260px,36vw,460px);aspect-ratio:490.6 / 436.9;transform:translate(-50%,50%);background:url('/react-logo.svg') center / contain no-repeat;opacity:.035;pointer-events:none}footer .footer-bridge{z-index:2}footer .footer-content,footer .footer-bottom{z-index:1}@media(max-width:700px){footer::after{width:min(300px,75vw);opacity:.03}}

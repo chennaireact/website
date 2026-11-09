@@ -1,45 +1,20 @@
 # Chennai React Website
 
-Official website for the Chennai React Community. Built with Next.js 16, TailwindCSS 4, and Framer Motion.
+The community landing page for Chennai React, built with Next.js, Bun, Framer Motion, Three.js, and Phosphor Icons.
 
-> **Note:** The website currently redirects all traffic (including the homepage and 404s) to the `/socials` page, which serves as the main landing profile for now.
+## Getting started
 
-## Tech Stack
-
-- **Framework:** Next.js 16 (Turbopack)
-- **Styling:** TailwindCSS 4
-- **Animations:** Framer Motion & GSAP
-- **Icons:** Lucide React
-- **Runtime/Package Manager:** Bun
-
-## Getting Started
-
-### 1. Prerequisites
-
-Make sure you have [Bun](https://bun.sh/) installed on your machine.
-
-### 2. Installation
-
-Install the dependencies:
+Install dependencies and start the development server:
 
 ```bash
 bun install
-```
-
-### 3. Running Locally
-
-Start the development server:
-
-```bash
 bun dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000). You will be automatically redirected to `/socials`.
+Open [http://localhost:3000](http://localhost:3000). To create a production build, run `bun run build`.
 
-### 4. Building for Production
+Set `LUMA_CALENDAR_ICS_URL` in `.env.local` to the community’s Luma iCalendar subscription URL to enable the events feed. Configure the same variable in your deployment environment; keep the subscription URL private.
 
-To create a production build:
+## Event gallery
 
-```bash
-bun run build
-```
+Add or remove JPG, PNG, WebP, AVIF, or GIF files in `public/images/gallery`. Restart `bun dev` or run a new build to refresh the gallery. Convert HEIC photos to a supported format first.
