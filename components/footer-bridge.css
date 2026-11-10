@@ -20,3 +20,19 @@ footer .footer-ambient{left:50%;bottom:0;width:clamp(260px,36vw,460px);transform
 
 /* Decorative mark is CSS-only so footer markup stays identical on server and client. */
 footer::after{content:"";position:absolute;z-index:0;left:50%;bottom:0;width:clamp(260px,36vw,460px);aspect-ratio:490.6 / 436.9;transform:translate(-50%,50%);background:url('/react-logo.svg') center / contain no-repeat;opacity:.035;pointer-events:none}footer .footer-bridge{z-index:2}footer .footer-content,footer .footer-bottom{z-index:1}@media(max-width:700px){footer::after{width:min(300px,75vw);opacity:.03}}
+
+/* Keep the footer easy to scan and tap on narrow screens. */
+@media(max-width:700px){
+  footer .footer-content{width:calc(100% - 48px);grid-template-columns:minmax(0,1fr);gap:32px;padding-top:32px;padding-bottom:36px}
+  footer .footer-brand-block{grid-column:auto}
+  footer .footer-brand-block .footer-logo{width:180px;margin-bottom:16px}
+  footer .footer-brand-block p{max-width:310px;line-height:1.6}
+  footer .footer-nav,footer .footer-social{align-items:stretch}
+  footer .footer-nav h2,footer .footer-social h2{margin-bottom:12px}
+  footer .footer-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px}
+  footer .footer-nav h2{grid-column:1 / -1}
+  footer .footer-nav a,footer .footer-social-grid a{min-height:40px;display:flex;align-items:center;line-height:1.35}
+  footer .footer-nav a+a{margin-top:0}
+  footer .footer-social-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+  footer .footer-bottom{width:calc(100% - 48px);gap:12px 20px;padding-top:20px;padding-bottom:calc(24px + env(safe-area-inset-bottom));line-height:1.5}
+}

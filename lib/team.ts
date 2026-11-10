@@ -1,4 +1,6 @@
-export const teamMembers = [
+type TeamMember = { name: string; link: string; image: string; role?: string };
+
+export const teamMembers: TeamMember[] = [
     {
       name: "Nikhil Kumaran S",
       link: "https://www.linkedin.com/in/nikhilkumaran/",
@@ -26,11 +28,13 @@ export const teamMembers = [
     },
     {
       name: "Nithin Kamlesh",
+      role: "Core Team, Emcee",
       link: "https://www.linkedin.com/in/nithin-kamlesh/",
       image: "/team/nithin-kamlesh.jpeg",
     },
     {
       name: "SB Praveen",
+      role: "Core Team, Emcee",
       link: "https://www.linkedin.com/in/sb-praveen-38423a154/",
       image: "/team/sb-praveen.JPG",
     },

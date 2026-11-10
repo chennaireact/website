@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteDescription, siteName, siteUrl } from "@/lib/seo";
+import SitePreloader from "@/components/SitePreloader";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,5 +21,5 @@ const organization = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en-IN"><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, "\\u003c") }} />{children}</body></html>;
+  return <html lang="en-IN"><body><SitePreloader /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, "\\u003c") }} />{children}</body></html>;
 }

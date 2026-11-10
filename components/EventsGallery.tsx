@@ -53,7 +53,7 @@ export default function EventsGallery() {
         const ratio = Math.min(1, Math.abs(offset * spacing) / Math.max(width / 2, 1));
         const top = 26 + 40 * (1 - ratio * ratio);
         return <motion.div key={photo.src} className="memory-card" style={{ width: cardWidth, marginLeft: -cardWidth / 2, zIndex: photos.length - Math.abs(offset) }} initial={false} animate={{ x: offset * spacing, y: top, rotate: reducedMotion ? 0 : Math.max(-7, Math.min(7, offset * 2.5)) }} transition={reducedMotion ? { duration: 0 } : { type: "spring", stiffness: 120, damping: 20 }}>
-          <button type="button" className="memory-print" aria-label={`Show ${photo.title}`} aria-pressed={index === active} onClick={() => { if (!suppressClick.current) go(index); }}><span className="memory-peg" aria-hidden="true"/><span className="memory-image"><Image src={photo.src} alt="" fill sizes="(max-width: 600px) 180px, 240px" quality={85} /></span><span className="memory-note">{photo.title}</span></button>
+          <button type="button" className="memory-print" aria-label={`Show ${photo.title}`} aria-pressed={index === active} onClick={() => { if (!suppressClick.current) go(index); }}><span className="memory-peg" aria-hidden="true"/><span className="memory-image"><Image src={photo.src} alt="" fill sizes="(max-width: 600px) 180px, 240px" unoptimized /></span><span className="memory-note">{photo.title}</span></button>
         </motion.div>;
       })}
       <div className="memory-bar"><div className="memory-caption" aria-live="polite"><strong>{photos[active].title}</strong><span>{photos[active].caption}</span></div><span className="memory-count">{String(active + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}</span></div>

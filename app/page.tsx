@@ -25,7 +25,7 @@ export default function Home() {
     <section className="hero" id="top" aria-label="Chennai React community" tabIndex={0} onKeyDown={event => { if (event.target !== event.currentTarget) return; if (event.key === "ArrowDown") { event.preventDefault(); document.getElementById("events")?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" }); } else if (event.key === "ArrowUp") { event.preventDefault(); window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" }); } }}>
       <motion.div className="hero-parallax" aria-hidden="true" style={{ y: reducedMotion ? 0 : heroParallax }} />
       <div className="hero-content"><h1 className="hero-title">Chennai’s own <span>React community.</span></h1><div className="hero-join"><a className="button button-lime hero-events-link" href={luma} target="_blank" rel="noreferrer">Explore events <ArrowUpRight size={18} weight="bold" /></a></div></div>
-      <img className="hero-foreground" src="/chennai-central-foreground.svg" alt="Illustration of Chennai Central railway station" />
+      <img className="hero-foreground" fetchPriority="high" loading="eager" src="/chennai-central-foreground.svg" alt="Illustration of Chennai Central railway station" />
       <a className="hero-scroll" href="#about" aria-label="Scroll to community"><ArrowDown size={20} /></a>
     </section>
 

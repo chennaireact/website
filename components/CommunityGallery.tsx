@@ -5,12 +5,12 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const cards = [
-  { id: "organizers", src: "/images/about%20section/DSC06451.JPG", title: "Making it happen", description: "Community members bringing ideas and energy to every meetup." },
-  { id: "speakers", src: "/images/about%20section/DSC02603.JPG", title: "Ideas worth sharing", description: "Community members sharing ideas, experiences, and the things they have learned." },
-  { id: "attendees", src: "/images/about%20section/DSC02515.JPG", title: "Curiosity in the room", description: "Curious minds showing up, asking questions, and meeting their fellow developers." },
-  { id: "community", src: "/images/about%20section/DSC02723.JPG", title: "Finding our people", description: "A welcoming space to find your people and grow together in Chennai." },
-  { id: "learning", src: "/images/about%20section/IMG_3751.JPG", title: "Learning together", description: "Fresh perspectives and practical knowledge to take into whatever you build next." },
-  { id: "fun", src: "/images/about%20section/DSC02541.JPG", title: "The moments between", description: "The voices and moments that make each meetup memorable." },
+  { id: "organizers", src: "/images/about%20section/DSC06451.webp", title: "Making it happen", description: "Community members bringing ideas and energy to every meetup." },
+  { id: "speakers", src: "/images/about%20section/DSC02603.webp", title: "Ideas worth sharing", description: "Community members sharing ideas, experiences, and the things they have learned." },
+  { id: "attendees", src: "/images/about%20section/DSC02515.webp", title: "Curiosity in the room", description: "Curious minds showing up, asking questions, and meeting their fellow developers." },
+  { id: "community", src: "/images/about%20section/DSC02723.webp", title: "Finding our people", description: "A welcoming space to find your people and grow together in Chennai." },
+  { id: "learning", src: "/images/about%20section/IMG_3751.webp", title: "Learning together", description: "Fresh perspectives and practical knowledge to take into whatever you build next." },
+  { id: "fun", src: "/images/about%20section/DSC02541.webp", title: "The moments between", description: "The voices and moments that make each meetup memorable." },
 ] as const;
 
 export default function CommunityGallery() {
@@ -57,7 +57,7 @@ export default function CommunityGallery() {
           whileHover={isActive || reducedMotion ? undefined : { y: 120 + Math.abs(offset) * 8 }}
           transition={reducedMotion ? { duration: 0 } : { type: "spring", stiffness: 260, damping: 27 }}
           style={{ zIndex: isActive ? 20 : 5 + handIndex }}
-        ><Image src={card.src} alt="" fill sizes="(max-width: 380px) 165px, (max-width: 700px) 190px, 230px" quality={95} className="gallery-photo" /></motion.button>;
+        ><Image src={card.src} alt="" fill sizes="(max-width: 380px) 165px, (max-width: 700px) 190px, 230px" unoptimized className="gallery-photo" /></motion.button>;
       })}
     </div>
     <div className="gallery-description" aria-live="polite"><span className="gallery-overline">THE PEOPLE BEHIND THE CODE</span><p>{selected.description}</p><span className="gallery-hint">PICK A PHOTO TO EXPLORE</span></div>
