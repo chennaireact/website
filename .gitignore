@@ -37,3 +37,15 @@ next-env.d.ts
 
 # Original speaker photos
 /public/images/original-images/
+
+# ImageKit-hosted community photos (keep local copies for development)
+/public/images/about section/
+/public/images/gallery/
+/public/images/coc/
+/public/images/past-speaker/
+/public/images/DSC02553.webp
+/public/images/DSC02590.webp
+/public/team/
+
+# Local-only ImageKit migration helper
+/scripts/upload-imagekit.ts

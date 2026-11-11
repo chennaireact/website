@@ -1,5 +1,5 @@
 import { pageMetadata } from "@/lib/seo";
-import Image from "next/image";
+import Image from "@/components/MediaImage";
 import { ArrowUpRight, Briefcase, Globe, MicrophoneStage, ShareNetwork, UsersThree } from "@phosphor-icons/react/dist/ssr";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";

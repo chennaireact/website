@@ -1,8 +1,9 @@
-import Image from "next/image";
+import Image from "@/components/MediaImage";
 import { ArrowUpRight, LinkedinLogo } from "@phosphor-icons/react/dist/ssr";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { pageMetadata, siteUrl } from "@/lib/seo";
+import { mediaUrl } from "@/lib/imagekit";
 import "./speakers.css";
 
 export const metadata = pageMetadata(
@@ -77,7 +78,7 @@ const speakerDirectory = {
         ...(speaker.organization && !speaker.atEvent && speaker.organization !== "Self-employed"
           ? { worksFor: { "@type": "Organization", name: speaker.organization } }
           : {}),
-        ...(speaker.image ? { image: new URL(speaker.image, siteUrl).href } : {}),
+        ...(speaker.image ? { image: new URL(mediaUrl(speaker.image), siteUrl).href } : {}),
         ...(speaker.linkedin ? { sameAs: [speaker.linkedin] } : {}),
       },
     })),

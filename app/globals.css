@@ -95,7 +95,7 @@
 }
 
 /* Community-supplied brand assets. */
-.brand-wordmark{display:block;width:188px;height:auto}.brand-icon{display:none;width:36px;height:29px;object-fit:contain}.header-shell.is-scrolled .brand-wordmark{display:none}.header-shell.is-scrolled .brand-icon{display:block}.footer-logo{display:block;width:200px;max-width:100%;height:auto;margin-bottom:32px}.city-illustration{height:clamp(140px,24vw,300px);background:#fff url('/illustrations/footer_chennai.jpg') center bottom / cover no-repeat}.event-date{position:relative;isolation:isolate;overflow:hidden}.event-date::before{content:"";position:absolute;z-index:-1;right:-85px;bottom:-100px;width:300px;height:300px;background:url('/illustrations/kolam.png') center / contain no-repeat;opacity:.12;pointer-events:none}@media(max-width:600px){.brand-wordmark{width:155px}.city-illustration{height:150px;background-size:auto 180px}.event-date::before{width:220px;height:220px;right:-40px;bottom:-80px}.footer-logo{width:175px}}
+.brand-wordmark{display:block;width:188px;height:auto}.brand-icon{display:none;width:36px;height:29px;object-fit:contain}.header-shell.is-scrolled .brand-wordmark{display:none}.header-shell.is-scrolled .brand-icon{display:block}.footer-logo{display:block;width:200px;max-width:100%;height:auto;margin-bottom:32px}.city-illustration{height:clamp(140px,24vw,300px);background:#fff url('/illustrations/footer_chennai.jpg') center bottom / cover no-repeat}.event-date{position:relative;isolation:isolate;overflow:hidden}.event-date::before{content:"";position:absolute;z-index:-1;right:-85px;bottom:-100px;width:300px;height:300px;background:var(--kolam-image, url('/illustrations/kolam.png')) center / contain no-repeat;opacity:.12;pointer-events:none}@media(max-width:600px){.brand-wordmark{width:155px}.city-illustration{height:150px;background-size:auto 180px}.event-date::before{width:220px;height:220px;right:-40px;bottom:-80px}.footer-logo{width:175px}}
 
 
 .hero{background-image:url('/chennai-central-no-ground.svg');position:relative;top:auto;height:100vh;height:100svh;min-height:560px;max-height:900px}
@@ -131,9 +131,9 @@
 .community-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.community-stats div{padding:28px 20px;text-align:center}.community-stats div+div{border-left:1px solid var(--line)}.community-stats strong{display:block;font-size:clamp(30px,4vw,45px);line-height:1;letter-spacing:-.05em;color:#087cf0}.community-stats span{display:block;margin-top:8px;font-size:13px;font-weight:600;color:#617286}@media(max-width:600px){.community-stats div{padding:22px 6px}.community-stats strong{font-size:30px}.community-stats span{font-size:12px}}
 /* A quiet kolam detail behind the About section. */
 .about{position:relative;isolation:isolate;overflow:hidden}
-.about::before{content:"";position:absolute;z-index:-1;top:30px;right:-180px;width:min(600px,65vw);aspect-ratio:1;background:url('/illustrations/kolam.png') center / contain no-repeat;opacity:.055;pointer-events:none}
+.about::before{content:"";position:absolute;z-index:-1;top:30px;right:-180px;width:min(600px,65vw);aspect-ratio:1;background:var(--kolam-image, url('/illustrations/kolam.png')) center / contain no-repeat;opacity:.055;pointer-events:none}
 @media(max-width:700px){.about::before{top:80px;right:-140px;width:420px;max-width:100vw;opacity:.045}}
-.about::before,.about::after{content:"";position:absolute;z-index:-1;width:clamp(300px,38vw,620px);aspect-ratio:1;background:url('/illustrations/kolam.png') center / contain no-repeat;opacity:.055;pointer-events:none}
+.about::before,.about::after{content:"";position:absolute;z-index:-1;width:clamp(300px,38vw,620px);aspect-ratio:1;background:var(--kolam-image, url('/illustrations/kolam.png')) center / contain no-repeat;opacity:.055;pointer-events:none}
 .about::before{top:3%;right:-18%;left:auto}
 .about::after{bottom:3%;left:-18%;right:auto}
 @media(max-width:700px){.about::before,.about::after{width:min(75vw,360px);opacity:.045}.about::before{top:5%;right:-35%}.about::after{bottom:5%;left:-35%}}
@@ -264,7 +264,7 @@
 @media(max-width:700px){.support-grid{display:grid;grid-template-columns:1fr;height:auto;gap:12px;background:transparent;border-radius:0}.support-grid .support-card,.support-grid .support-card:first-child,.support-grid .support-card:last-child{position:relative;inset:auto;width:100%;min-height:340px;clip-path:none;border-radius:12px;align-items:flex-end;justify-content:flex-start}.support-grid .support-card .support-photo::after,.support-grid .support-card:last-child .support-photo::after{background:linear-gradient(180deg,rgba(10,24,36,.08) 10%,rgba(10,24,36,.88) 100%)}.support-grid .support-body{width:100%;padding:24px}.support-grid .support-card:last-child .support-body{text-align:left}.support-grid .support-body h3{font-size:28px}.support-grid .support-action{margin-top:18px}}
 
 .support-section{position:relative;isolation:isolate;overflow:hidden;background:#f2f3f4}
-.support-section::before,.support-section::after{content:"";position:absolute;z-index:-1;width:clamp(320px,38vw,600px);aspect-ratio:1;background:url('/illustrations/kolam.png') center / contain no-repeat;filter:grayscale(1);opacity:.06;pointer-events:none}
+.support-section::before,.support-section::after{content:"";position:absolute;z-index:-1;width:clamp(320px,38vw,600px);aspect-ratio:1;background:var(--kolam-image, url('/illustrations/kolam.png')) center / contain no-repeat;filter:grayscale(1);opacity:.06;pointer-events:none}
 .support-section::before{top:4%;right:-12%}.support-section::after{bottom:2%;left:-15%}
 @media(max-width:700px){.support-section::before,.support-section::after{width:min(75vw,360px);opacity:.05}.support-section::before{right:-30%}.support-section::after{left:-30%}}
 .support-section{background:#fff}
@@ -273,7 +273,7 @@
 .support-section::before,.support-section::after{opacity:.07}
 @media(max-width:700px){.support-section::before,.support-section::after{opacity:.06}}
 .support-heading{position:relative;isolation:isolate;min-height:130px}
-.support-heading::after{content:"";position:absolute;z-index:-1;right:15%;top:50%;width:180px;aspect-ratio:1;transform:translateY(-50%);background:url('/illustrations/kolam.png') center / contain no-repeat;opacity:.16;pointer-events:none}
+.support-heading::after{content:"";position:absolute;z-index:-1;right:15%;top:50%;width:180px;aspect-ratio:1;transform:translateY(-50%);background:var(--kolam-image, url('/illustrations/kolam.png')) center / contain no-repeat;opacity:.16;pointer-events:none}
 @media(max-width:700px){.support-heading{min-height:0}.support-heading::after{right:-25px;width:130px;opacity:.13}}
 .support-heading::after{display:none}
 .sponsor-logo{border:0;background:transparent;min-height:120px;padding:14px}

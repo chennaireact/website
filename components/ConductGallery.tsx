@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "@/components/MediaImage";
 import { motion, useReducedMotion } from "framer-motion";
 
 const photos = ["DSC06426.webp", "DSC06408.webp", "DSC06430.webp", "DSC06420.webp"];

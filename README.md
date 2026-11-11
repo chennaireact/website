@@ -36,7 +36,13 @@ Set `LUMA_CALENDAR_ICS_URL` in `.env.local` to the community’s Luma iCalendar 
 
 Use lossless WebP for new raster images, preserving the source files locally under `public/images/original-images/<section>/`. The original-images folder is ignored by Git. Keep SVG illustrations as SVG; see [AGENTS.md](AGENTS.md) for image and quality guidance.
 
-Add or remove gallery images in `public/images/gallery`, then run `bun scripts/generate-gallery.ts` (also run automatically by `bun dev` and `bun run build`).
+Add published gallery photos in ImageKit as described below. If you maintain local fallback images in `public/images/gallery`, run `bun scripts/generate-gallery.ts` to update the checked-in fallback manifest.
+
+## ImageKit community photos
+
+Community photos are delivered from ImageKit when `NEXT_PUBLIC_IMAGEKIT_ENABLED=true` and `NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT` is configured. The kolam is also served from ImageKit; logos, other illustrations, social graphics, and Luma event covers remain local or on their original source. Set `IMAGEKIT_PRIVATE_KEY` only in the server deployment environment; it is used to list gallery photos and must never be exposed to the browser.
+
+Add published photos to the `/chennaireact/images/gallery` ImageKit folder to update the event gallery automatically (allow five minutes for caching). Community photos are ignored by Git and remain only on ImageKit and in existing local copies. A fresh checkout or deployment must configure the ImageKit endpoint and set `NEXT_PUBLIC_IMAGEKIT_ENABLED=true` to display these photos. Setting it to `false` and rebuilding uses local copies only if they are present on that machine.
 
 ## Contributing
 

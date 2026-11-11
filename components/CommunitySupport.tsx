@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/MediaImage";
 import "./contribute.css";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 

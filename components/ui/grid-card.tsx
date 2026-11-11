@@ -3,7 +3,8 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
+import type { StaticImageData } from "next/image";
+import Image from "@/components/MediaImage";
 import Link from "next/link";
 
 interface GridCardProps {

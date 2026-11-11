@@ -28,8 +28,6 @@ function waitForImage(image: HTMLImageElement, signal: AbortSignal): Promise<voi
     signal.addEventListener("abort", finish, { once: true });
     if (signal.aborted) return finish();
 
-    // Start the browser's selected responsive source, even for off-screen images.
-    if (image.loading === "lazy") image.loading = "eager";
     if (image.complete && image.currentSrc) {
       if (image.naturalWidth > 0) loaded();
       else finish();
@@ -43,6 +41,8 @@ function backgroundImages(): string[] {
   const urls = new Set<string>();
   for (const element of document.querySelectorAll("body *")) {
     if (element.closest(".site-preloader")) continue;
+    const rect = element.getBoundingClientRect();
+    if (rect.bottom <= 0 || rect.top >= window.innerHeight || rect.right <= 0 || rect.left >= window.innerWidth) continue;
     for (const pseudo of [null, "::before", "::after"] as const) {
       const style = window.getComputedStyle(element, pseudo);
       if (style.display === "none" || (pseudo && style.content === "none")) continue;
@@ -78,7 +78,11 @@ export default function SitePreloader() {
     const fallback = window.setTimeout(finish, MAX_WAIT_MS);
     // Let the initial page commit before taking a snapshot of its images.
     scanFrame = window.requestAnimationFrame(() => {
-      const pageImages = [...document.images].filter((image) => !image.closest(".site-preloader"));
+      const pageImages = [...document.images].filter((image) => {
+        if (image.closest(".site-preloader")) return false;
+        const rect = image.getBoundingClientRect();
+        return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < window.innerHeight && rect.right > 0 && rect.left < window.innerWidth;
+      });
       const imageUrls = new Set(pageImages.map((image) => image.currentSrc || image.src).filter(Boolean));
       const backgrounds = backgroundImages()
         .filter((url) => !imageUrls.has(url))

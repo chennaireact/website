@@ -17,7 +17,9 @@
 - Before committing new or updated raster images used on the site, convert them to lossless WebP and update all references. Preserve transparency, orientation, and sufficient resolution; verify the converted result against the decoded source. WebP stores 8-bit color, so disclose any bit-depth limitation instead of claiming bit-for-bit equivalence to higher-bit-depth originals.
 - Keep original image files locally under `public/images/original-images/<section>/`; this folder is Git-ignored. Do not commit source files from that folder. Preserve existing SVG illustrations and use other formats when WebP cannot faithfully represent an asset (for example, animation or a format required by an integration); document the reason.
 - Avoid introducing a second lossy image conversion when lossless output is requested. Lazy-load below-the-fold images and prioritize only genuinely critical imagery. Consider download size and loading performance when choosing image dimensions.
-- For the events gallery, regenerate `lib/gallery-images.json` with `bun scripts/generate-gallery.ts` after changing `public/images/gallery`.
+- Use the ImageKit CDN for heavy community and event photographs, including gallery, team, speaker, Code of Conduct, and speaker/sponsor photos. Use `components/MediaImage.tsx` and `lib/imagekit.ts` for supported image paths, retain responsive sizing and lossless delivery, and follow the ImageKit guidance in `README.md`. Community photo copies are ignored by Git; never expose the ImageKit private key.
+- The kolam is also served through ImageKit. Keep logos, other illustrations, social graphics, and dynamically supplied Luma event covers local or on their original source unless explicitly requested otherwise.
+- For the events gallery, add published images to `/chennaireact/images/gallery` in ImageKit. Regenerate the local fallback `lib/gallery-images.json` with `bun scripts/generate-gallery.ts` after changing `public/images/gallery`.
 
 ## Responsive and quality checks
 

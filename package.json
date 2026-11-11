@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@imagekit/next": "^2.1.6",
     "@phosphor-icons/react": "^2.1.10",
     "@tabler/icons-react": "^3.36.1",
     "clsx": "^2.1.1",

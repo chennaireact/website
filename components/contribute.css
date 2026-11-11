@@ -22,7 +22,7 @@
 .contribute-tile:first-child .contribute-photo img{object-position:55% center}.contribute-tile:last-child .contribute-photo img{object-position:center center}@media(max-width:700px){.contribute-tile:first-child .contribute-photo img{object-position:48% center}}
 /* A soft kolam bridges the two invitations. */
 .contribute-split{position:relative}
-.contribute-split::after{content:"";position:absolute;z-index:3;left:50%;top:50%;width:clamp(180px,24vw,320px);aspect-ratio:1;transform:translate(-50%,-50%);background:url('/illustrations/kolam.png') center / contain no-repeat;filter:grayscale(1);opacity:.09;pointer-events:none}
+.contribute-split::after{content:"";position:absolute;z-index:3;left:50%;top:50%;width:clamp(180px,24vw,320px);aspect-ratio:1;transform:translate(-50%,-50%);background:var(--kolam-image, url('/illustrations/kolam.png')) center / contain no-repeat;filter:grayscale(1);opacity:.09;pointer-events:none}
 @media(max-width:700px){.contribute-split::after{width:180px;opacity:.08}}
 .contribute-split::after{filter:brightness(0) invert(1);opacity:.32}
 @media(max-width:700px){.contribute-split::after{opacity:.28}}
