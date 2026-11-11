@@ -287,3 +287,14 @@
 .gallery-photo{object-position:50% 30%}
 .about::before,.about::after{opacity:.09}
 @media(max-width:700px){.about::before,.about::after{opacity:.075}}
+
+/* Keep the expanded navigation clear at tablet widths. */
+@media(max-width:900px){
+  .header-shell .header{width:calc(100% - 24px);padding:0 12px}
+  .header-shell .header nav,.header-shell .nav-cta{display:none}
+  .header-shell.is-scrolled .header{width:calc(100% - 24px)}
+  .header-shell .menu-toggle{display:flex}
+  .header-shell .mobile-navigation{display:flex;flex-direction:column;gap:0;max-height:calc(100dvh - 100px);overflow-y:auto;margin:8px 12px 0;padding:10px 20px;background:rgba(255,255,255,.97);border:1px solid #e1eaf2;border-radius:16px;box-shadow:0 12px 30px rgba(23,43,66,.1)}
+  .header-shell .mobile-navigation a{padding:14px 2px;border-bottom:1px solid #eaf0f5;font-size:14px;font-weight:600}
+  .header-shell .mobile-navigation a:last-child{display:flex;align-items:center;gap:8px;border:0;color:#087cf0}
+}
