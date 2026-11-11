@@ -16,7 +16,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="relative h-full w-full overflow-hidden rounded-full border-8 border-white shadow-2xl"
           >
-            <Image src="/chennaireact.png" alt="Chennai React Community" fill className="object-cover" priority />
+            <Image src="/chennaireact_bg.png" alt="Chennai React Community" fill className="object-cover" priority />
           </motion.div>
 
           {/* Floating Element 1: Location Badge */}

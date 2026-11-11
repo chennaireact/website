@@ -11,52 +11,52 @@ export default function Sponsors() {
     {
       name: "Talentship",
       link: "https://talentship.io/en/",
-      image: "/sponsors/talentship.jpg",
+      image: "/sponsors/talentship.webp",
     },
     {
       name: "Imagekit.io",
       link: "https://imagekit.io/",
-      image: "/sponsors/imagekit-io.png",
+      image: "/sponsors/imagekit-io.webp",
     },
     {
       name: "WSO2",
       link: "https://wso2.com/",
-      image: "/sponsors/wso2.png",
+      image: "/sponsors/wso2.webp",
     },
     {
       name: "IBM",
       link: "#",
-      image: "/sponsors/ibm.png",
+      image: "/sponsors/ibm.webp",
     },
     {
       name: "Yuniq",
       link: "https://yuniq.co/",
-      image: "/sponsors/yuniq.jpg",
+      image: "/sponsors/yuniq.webp",
     },
     {
       name: "Think42 Labs",
       link: "https://www.think42labs.com/home",
-      image: "/sponsors/think42-labs.png",
+      image: "/sponsors/think42-labs.webp",
     },
     {
       name: "FULL",
       link: "http://full.io/",
-      image: "/sponsors/full.png",
+      image: "/sponsors/full.webp",
     },
     {
       name: "Mahathaan",
       link: "https://mahathaan.com/",
-      image: "/sponsors/mahathaan.png",
+      image: "/sponsors/mahathaan.webp",
     },
     {
       name: "St. Joseph's Group",
       link: "https://stjosephsgroup.org/",
-      image: "/sponsors/st-joseph-s-group.png",
+      image: "/sponsors/st-joseph-s-group.webp",
     },
     {
       name: "7 Angle",
       link: "https://7angle.com/",
-      image: "/sponsors/7-angle.png",
+      image: "/sponsors/7-angle.webp",
     },
   ];
 

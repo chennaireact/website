@@ -1,45 +1,51 @@
 # Chennai React Website
 
-Official website for the Chennai React Community. Built with Next.js 16, TailwindCSS 4, and Framer Motion.
+[![Built with Next.js](https://img.shields.io/badge/Built%20with-Next.js-black?logo=nextdotjs)](https://nextjs.org/)
+[![Package manager: Bun](https://img.shields.io/badge/Package%20manager-Bun-000000?logo=bun)](https://bun.sh/)
+[![Animations: Motion](https://img.shields.io/badge/Animations-Motion-0055FF)](https://motion.dev/)
+[![Icons: Phosphor](https://img.shields.io/badge/Icons-Phosphor-3C402B)](https://phosphoricons.com/)
+[![Contributors](https://img.shields.io/github/contributors/chennaireact/website)](https://github.com/chennaireact/website/graphs/contributors)
 
-> **Note:** The website currently redirects all traffic (including the homepage and 404s) to the `/socials` page, which serves as the main landing profile for now.
+The website for Chennai React, a community for people in Chennai to learn, build, and share ideas about React. It includes community events, speaker profiles, the team, sponsors, and our Code of Conduct.
 
-## Tech Stack
+## Built with
 
-- **Framework:** Next.js 16 (Turbopack)
-- **Styling:** TailwindCSS 4
-- **Animations:** Framer Motion & GSAP
-- **Icons:** Lucide React
-- **Runtime/Package Manager:** Bun
+- [Next.js](https://nextjs.org/), React, and TypeScript
+- [Bun](https://bun.sh/) for packages and project scripts
+- [Motion](https://motion.dev/), Three.js, and Phosphor Icons
 
-## Getting Started
+## Getting started
 
-### 1. Prerequisites
-
-Make sure you have [Bun](https://bun.sh/) installed on your machine.
-
-### 2. Installation
-
-Install the dependencies:
+Install Bun and Node.js 20 or later, then run:
 
 ```bash
 bun install
-```
-
-### 3. Running Locally
-
-Start the development server:
-
-```bash
 bun dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000). You will be automatically redirected to `/socials`.
-
-### 4. Building for Production
-
-To create a production build:
+Open [localhost:3000](http://localhost:3000). For a production build and local production server:
 
 ```bash
 bun run build
+bun start
 ```
+
+Set `LUMA_CALENDAR_ICS_URL` in `.env.local` to the community’s Luma iCalendar subscription URL for the events feed. Configure it in the deployment environment too, and keep the subscription URL private.
+
+## Images and gallery
+
+Use lossless WebP for new raster images, preserving the source files locally under `public/images/original-images/<section>/`. The original-images folder is ignored by Git. Keep SVG illustrations as SVG; see [AGENTS.md](AGENTS.md) for image and quality guidance.
+
+Add or remove gallery images in `public/images/gallery`, then run `bun scripts/generate-gallery.ts` (also run automatically by `bun dev` and `bun run build`).
+
+## Contributing
+
+Contributions are welcome. **Open or find an issue before opening a pull request**, and link it in the PR. Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+
+## Contributors
+
+Thank you to everyone who has helped build and maintain the website. See the [GitHub contributors list](https://github.com/chennaireact/website/graphs/contributors) for the current list.
+
+## Community
+
+Visit [Chennai React](https://www.chennaireact.in/) and follow the community on [LinkedIn](https://www.linkedin.com/company/chennaireact/) and [GitHub](https://github.com/chennaireact).
