@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { siteDescription, siteName, siteUrl } from "@/lib/seo";
+import { siteDescription, siteName, siteUrl, socialImage } from "@/lib/seo";
 import SitePreloader from "@/components/SitePreloader";
 import { mediaUrl } from "@/lib/imagekit";
 import type { CSSProperties } from "react";
@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   title: { default: "Chennai React | Chennai’s React Developer Community", template: "%s | Chennai React" },
   description: siteDescription,
   alternates: { canonical: "/" },
-  openGraph: { type: "website", siteName, title: "Chennai React | Chennai’s React Developer Community", description: siteDescription, url: "/", images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Chennai React community" }] },
-  twitter: { card: "summary_large_image", title: "Chennai React | Chennai’s React Developer Community", description: siteDescription, images: ["/opengraph-image"] },
+  openGraph: { type: "website", siteName, title: "Chennai React | Chennai’s React Developer Community", description: siteDescription, url: "/", images: [socialImage] },
+  twitter: { card: "summary_large_image", title: "Chennai React | Chennai’s React Developer Community", description: siteDescription, images: [socialImage] },
 };
 
 const organization = {
