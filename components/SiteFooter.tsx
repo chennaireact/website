@@ -1,5 +1,5 @@
 import "./footer-bridge.css";
-import { Butterfly, CalendarBlank, DiscordLogo, GithubLogo, InstagramLogo, LinkedinLogo, WhatsappLogo, XLogo, YoutubeLogo } from "@phosphor-icons/react/dist/ssr";
+import { Atom, Butterfly, CalendarBlank, DiscordLogo, GithubLogo, InstagramLogo, LinkedinLogo, WhatsappLogo, XLogo, YoutubeLogo } from "@phosphor-icons/react/dist/ssr";
 
 const socials = [
   { name: "Instagram", url: "https://instagram.com/chennaireact", icon: InstagramLogo },
@@ -11,6 +11,7 @@ const socials = [
   { name: "Bluesky", url: "https://bsky.app/profile/chennaireact.bsky.social", icon: Butterfly },
   { name: "YouTube", url: "https://www.youtube.com/@ChennaiReactJS", icon: YoutubeLogo },
   { name: "Luma", url: "https://lu.ma/chennai-react", icon: CalendarBlank },
+  { name: "react.dev", url: "https://react.dev/community/meetups#india", icon: Atom },
 ];
 
 export default function SiteFooter() {
