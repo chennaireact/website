@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { siteDescription, siteName, siteUrl, socialImage } from "@/lib/seo";
 import SitePreloader from "@/components/SitePreloader";
 import { mediaUrl } from "@/lib/imagekit";
@@ -23,5 +24,17 @@ const organization = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en-IN"><body style={{ "--kolam-image": `url("${mediaUrl("/illustrations/kolam.png")}")` } as CSSProperties}><SitePreloader /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, "\\u003c") }} />{children}</body></html>;
+  return (
+    <html lang="en-IN">
+      <body style={{ "--kolam-image": `url("${mediaUrl("/illustrations/kolam.png")}")` } as CSSProperties}>
+        <SitePreloader />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, "\\u003c") }}
+        />
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  );
 }
