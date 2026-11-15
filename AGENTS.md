@@ -12,6 +12,11 @@
 - Use the shared `pageMetadata` helper in `lib/seo.ts` for page-specific canonical, Open Graph, and Twitter metadata where appropriate. Add new public, indexable pages to `app/sitemap.ts` and check `app/robots.ts`.
 - Add structured data only where it accurately reflects visible, verified content. Escape JSON-LD safely. Never claim that metadata guarantees search rankings or indexing.
 
+## Analytics
+
+- Umami site-wide tracking is loaded in `app/layout.tsx` with `next/script`, alongside Vercel Analytics. Preserve this shared integration when changing layouts, and avoid adding duplicate tracking scripts or pageview events.
+- The Umami website ID is public and identifies the site; do not add analytics credentials or other secrets to client-side code.
+
 ## Images
 
 - Before committing new or updated raster images used on the site, convert them to lossless WebP and update all references. Preserve transparency, orientation, and sufficient resolution; verify the converted result against the decoded source. WebP stores 8-bit color, so disclose any bit-depth limitation instead of claiming bit-for-bit equivalence to higher-bit-depth originals.

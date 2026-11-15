@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { siteDescription, siteName, siteUrl, socialImage } from "@/lib/seo";
 import SitePreloader from "@/components/SitePreloader";
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
         {children}
         <Analytics />
+        <Script src="https://cloud.umami.is/script.js" data-website-id="ff4492cd-5692-4025-b912-55a6fa358f6e" strategy="afterInteractive" />
       </body>
     </html>
   );

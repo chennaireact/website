@@ -4,6 +4,7 @@
 [![Package manager: Bun](https://img.shields.io/badge/Package%20manager-Bun-000000?logo=bun)](https://bun.sh/)
 [![Animations: Motion](https://img.shields.io/badge/Animations-Motion-0055FF)](https://motion.dev/)
 [![Icons: Phosphor](https://img.shields.io/badge/Icons-Phosphor-3C402B)](https://phosphoricons.com/)
+[![Analytics: Umami](https://img.shields.io/badge/Analytics-Umami-000000)](https://umami.is/)
 [![Contributors](https://img.shields.io/github/contributors/chennaireact/website)](https://github.com/chennaireact/website/graphs/contributors)
 
 The website for Chennai React, a community for people in Chennai to learn, build, and share ideas about React. It includes community events, speaker profiles, the team, sponsors, and our Code of Conduct.
@@ -31,6 +32,10 @@ bun start
 ```
 
 Set `LUMA_CALENDAR_ICS_URL` in `.env.local` to the community’s Luma iCalendar subscription URL for the events feed. Configure it in the deployment environment too, and keep the subscription URL private.
+
+## Analytics
+
+The site uses [Umami](https://umami.is/) for site-wide analytics alongside Vercel Analytics. The Umami script and public website ID are configured in `app/layout.tsx` and load across the site after it becomes interactive. No Umami environment variable is required.
 
 ## Images and gallery
 
